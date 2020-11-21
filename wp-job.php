@@ -14,6 +14,9 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 define( 'WP_JOB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
+require_once WP_JOB_DIR_PATH . 'include/plugin-actions.php';
+
+
 add_action( 'init', 'create_wp_jobs');
 function create_wp_jobs() {
 
