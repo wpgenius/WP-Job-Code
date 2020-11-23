@@ -1,0 +1,46 @@
+/*
+* WP JOb CSS
+*/
+
+.single-job-wrapper {
+    border-radius: 4px;
+    border: 1px solid #ccd1d9;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.job-wrapper h5 {
+    text-transform: capitalize;
+}
+
+.job-wrapper a:hover h5 {
+    color: #ffffff;
+}
+
+.job-wrapper a:hover span {
+    background: none;
+    color: #ffffff;
+}
+
+.single-job-wrapper .job-type span {
+	color: #2667c9;
+    background-color: #e6f0f6;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+.job-wrapper a:hover .single-job-wrapper {
+    background-color: #8e4190;
+}
+
+.job-cat {
+	color: #2667c9;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+
