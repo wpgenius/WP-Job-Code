@@ -115,3 +115,25 @@ function create_wp_jobs() {
 	) );
 
 }
+
+/**
+ * Activate the plugin.
+ */
+function plugin_wp_job_activate() { 
+    // Trigger our function that registers the custom post type plugin.
+    create_wp_jobs(); 
+    // Clear the permalinks after the post type has been registered.
+    flush_rewrite_rules(); 
+}
+register_activation_hook( __FILE__, 'plugin_wp_job_activate' );
+
+/**
+ * Deactivation hook.
+ */
+function plugin_wp_job_deactivate() {
+    // Unregister the post type, so the rules are no longer in memory.
+    unregister_post_type( 'wp_jobs' );
+    // Clear the permalinks to remove our post type's rules from the database.
+    flush_rewrite_rules();
+}
+register_deactivation_hook( __FILE__, 'plugin_wp_job_deactivate' );
