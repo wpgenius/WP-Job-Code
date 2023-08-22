@@ -1,5 +1,5 @@
-<?php 
-get_header(); 
+<?php
+get_header();
 global $post;
 ?>
 
@@ -9,25 +9,23 @@ global $post;
 		<div class="sections_group">
 			<?php
 
-				if (have_posts()) {
+			if ( have_posts() ) {
 
-					while (have_posts()) {
+				while ( have_posts() ) {
 
-						the_post();
+					the_post();
 
-						$mfn_builder = new Mfn_Builder_Front(get_the_ID());
-						$mfn_builder->show();
+					the_content();
 
-					}
-
-				} else {
-
-					// template: default
-
-					while (have_posts()) {
-						echo "No job found";
-					}
 				}
+			} else {
+
+				// template: default
+
+				while ( have_posts() ) {
+					echo 'No job found';
+				}
+			}
 
 			?>
 		</div>
@@ -37,4 +35,5 @@ global $post;
 	</div>
 </div>
 
-<?php get_footer();
+<?php
+get_footer();
