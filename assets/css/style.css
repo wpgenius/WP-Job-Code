@@ -23,7 +23,7 @@
 }
 
 .single-job-wrapper .job-type span {
-	color: #2667c9;
+    color: #2667c9;
     background-color: #e6f0f6;
     padding-left: 10px;
     padding-right: 10px;
@@ -38,9 +38,7 @@
 }
 
 .job-cat {
-	color: #2667c9;
+    color: #2667c9;
     text-align: right;
     text-transform: capitalize;
 }
-
-
