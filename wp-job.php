@@ -1,6 +1,6 @@
 <?php
 
-/**
+/*
 Plugin Name: WP Job Code
 Plugin URI: https://wpgenius.in
 Description: WP Job is a simole plugin to post jobs.
