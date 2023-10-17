@@ -42,3 +42,8 @@
     text-align: right;
     text-transform: capitalize;
 }
+
+.job-item {
+    display: block;
+    width: 100%;
+}

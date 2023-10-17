@@ -21,6 +21,8 @@ require_once WP_JOB_DIR_PATH . 'include/shortcode/job-list.php';
 
 function load_plugin_css() {
 		wp_enqueue_style( 'wp-job-css', plugin_dir_url( __FILE__ ) . 'assets/css/style.css' );
+		wp_register_script( 'jc-isotop' , plugin_dir_url( __FILE__ ). 'assets/js/isotope.min.js', array('jquery'), 1.0, true);
+		wp_register_script( 'jc-custom' , plugin_dir_url( __FILE__ ). 'assets/js/customscript.js', array('jc-isotop'), 1.0, true);
 }
 add_action( 'wp_enqueue_scripts', 'load_plugin_css' );
 
