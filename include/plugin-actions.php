@@ -1,7 +1,7 @@
 <?php
 
 function apply_templates( $template ) {
-	if ( wp_get_theme()->parent()->get( 'Name' ) == 'Astra' ) {
+	if ( wp_get_theme()->parent()->get( 'Name' ) != 'Astra' ) {
 		global $post;
 		$post_type = get_post_type( $post );
 		if ( $post_type == 'wp_jobs' ) {
