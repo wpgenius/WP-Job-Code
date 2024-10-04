@@ -4,17 +4,30 @@
 
 .single-job-wrapper {
     border-radius: 4px;
-    border: 1px solid #ccd1d9;
+    border: 1px solid #7651E1;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 75px;
+    box-shadow: 40px 60px 40px 0px #F5F7FB;
+    transition: border 0.2s ease;
+}
+
+.single-job-wrapper:hover {
+    border-width: 3px;
 }
 
 .job-wrapper h5 {
-    text-transform: capitalize;
+    font-family: 'Graphik';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1E1E1E;
+    margin: 0;
 }
 
-.job-wrapper a:hover h5 {
-    color: #ffffff;
+.single-job-wrapper:hover h5 {
+    color: #797DF4;
 }
 
 .job-wrapper a:hover span {
@@ -22,28 +35,86 @@
     color: #ffffff;
 }
 
-.single-job-wrapper .job-type span {
-    color: #2667c9;
-    background-color: #e6f0f6;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    margin-right: 10px;
-    text-transform: capitalize;
-}
-
-.job-wrapper a:hover .single-job-wrapper {
-    background-color: #8e4190;
-}
-
-.job-cat {
-    color: #2667c9;
-    text-align: right;
-    text-transform: capitalize;
-}
-
 .job-item {
     display: block;
     width: 100%;
+}
+
+.single-job-wrapper {
+    display: grid;
+    grid-template-columns: 45% 25% 25% 5%;
+    padding: 60px 55px;
+    align-items: center;
+}
+
+.filter_buttons {
+    background-color: transparent;
+    font-family: 'Graphik';
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1E1E1E;
+}
+
+.filter_buttons:hover {
+    background-color: transparent;
+    color: #1E1E1E;
+}
+
+button.filter_buttons:focus {
+    background: none;
+    color: #1E1E1E;
+}
+
+button.filter_buttons.is-checked {
+    border-bottom: 5px solid #797DF4;
+}
+
+button.filter_buttons {
+    padding: 0 0 15px 0;
+    margin: 0 20px;
+}
+
+button.filter_buttons:first-child {
+    margin: 0 20px 0 0;
+}
+
+.location,
+.job-type,
+.job-link {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 27px;
+    letter-spacing: 0em;
+}
+
+@media only screen and (max-width: 767px) {
+    .single-job-wrapper {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 100%;
+        justify-items: start;
+    }
+    .single-job-wrapper .location,
+    .single-job-wrapper .job-type,
+    .single-job-wrapper .job-link {
+        margin-top: 10px;
+    }
+    .wp_jobs-template-default .ast-container {
+        padding: 20px !important;
+    }
+    .filter-button-group {
+        display: flex;
+        gap: 20px;
+        grid-template-columns: 50% 50%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    button.filter_buttons {
+        margin: 0 !important;
+    }
 }

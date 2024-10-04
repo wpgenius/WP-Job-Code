@@ -14,6 +14,8 @@ defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
 define( 'WP_JOB_DIR_PATH', plugin_dir_path( __FILE__ ) );
 
+define( 'WP_JOB_DIR_URL', plugin_dir_url( __FILE__ ) );
+
 require_once WP_JOB_DIR_PATH . 'include/plugin-actions.php';
 
 require_once WP_JOB_DIR_PATH . 'include/shortcode/job-list.php';
@@ -147,3 +149,50 @@ function plugin_wp_job_deactivate() {
 	flush_rewrite_rules();
 }
 register_deactivation_hook( __FILE__, 'plugin_wp_job_deactivate' );
+
+
+function wp_job_meta_box() {
+	add_meta_box( 'job-meta', __( 'Job meta' , 'altiushub' ),  'wp_job_post_meta_callback' , 'wp_jobs', 'advanced', 'high' );
+}
+add_action( 'add_meta_boxes', 'wp_job_meta_box');
+
+/**
+ * Add post meta boxes to post type
+ *
+ * @param object $post
+ * @return void
+ */
+function wp_job_post_meta_callback( $post ) {
+
+	$value = get_post_meta( $post->ID, 'job_location', true ); ?>
+
+	<table class="form-table as_metabox">
+
+		<div class="myplugin-image-preview">
+			<div style="margin-bottom:10px;">
+				<label for="job_location"><?php _e( 'Job Location', 'altiushub' ); ?></label>
+			</div>
+			<div>
+				<input style="width:100%; padding:10px !important;" type="text" id="job_location" name="job_location" value="<?php echo $value; ?>" />
+			</div>
+		</div>
+	</table>
+	<?php
+}
+
+/**
+ * Save post data of post type
+ *
+ * @param int $post_id
+ * @return void
+ */
+function wp_job_save_post_meta( $post_id ) {
+
+	if ( isset( $_POST['job_location'] ) && $_POST['job_location'] != '' ) {
+		$mydata = $_POST['job_location'];
+		update_post_meta( $post_id, 'job_location', $mydata );
+
+	}
+}
+add_action( 'save_post', 'wp_job_save_post_meta' );
+
