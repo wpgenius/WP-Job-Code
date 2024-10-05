@@ -164,19 +164,29 @@ add_action( 'add_meta_boxes', 'wp_job_meta_box');
  */
 function wp_job_post_meta_callback( $post ) {
 
-	$value = get_post_meta( $post->ID, 'job_location', true ); ?>
+	$job_experience = get_post_meta( $post->ID, 'job_experience', true ); 
+	$job_qualification = get_post_meta( $post->ID, 'job_qualification', true ); ?>
 
-	<table class="form-table as_metabox">
-
-		<div class="myplugin-image-preview">
-			<div style="margin-bottom:10px;">
-				<label for="job_location"><?php _e( 'Experience required', 'altiushub' ); ?></label>
+	<div class="form-wrap">
+		<div class="class-row">
+			<div class="left">
+				<label for="job_experience"><?php _e( 'Experience required', 'altiushub' ); ?></label>
 			</div>
-			<div>
-				<input style="width:100%; padding:10px !important;" type="text" id="job_location" name="job_location" value="<?php echo $value; ?>" />
+			<div class="right">
+				<input style="width:100%; padding:10px !important;" type="text" id="job_experience" name="job_experience" value="<?php echo $job_experience; ?>" />
 			</div>
 		</div>
-	</table>
+		
+		<div class="class-row">
+			<div class="left">
+				<label for="job_qualification"><?php _e( 'Qualification required', 'altiushub' ); ?></label>
+			</div>
+			<div class="right">
+				<input style="width:100%; padding:10px !important;" type="text" id="job_qualification" name="job_qualification" value="<?php echo $job_qualification; ?>" />
+			</div>
+		</div>
+	</div>
+
 	<?php
 }
 
@@ -188,9 +198,15 @@ function wp_job_post_meta_callback( $post ) {
  */
 function wp_job_save_post_meta( $post_id ) {
 
-	if ( isset( $_POST['job_location'] ) && $_POST['job_location'] != '' ) {
-		$mydata = $_POST['job_location'];
-		update_post_meta( $post_id, 'job_location', $mydata );
+	if ( isset( $_POST['job_experience'] ) && $_POST['job_experience'] != '' ) {
+		$mydata = $_POST['job_experience'];
+		update_post_meta( $post_id, 'job_experience', $mydata );
+
+	}
+
+	if ( isset( $_POST['job_qualification'] ) && $_POST['job_qualification'] != '' ) {
+		$mydata = $_POST['job_qualification'];
+		update_post_meta( $post_id, 'job_qualification', $mydata );
 
 	}
 }

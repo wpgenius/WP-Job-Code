@@ -43,7 +43,7 @@ function display_job_list() {
 									<h5><?php the_title(); ?></h5>
 								</div>
 								<div class="location">
-									<span><?php echo get_post_meta( $post->ID, 'job_location', true ); ?></span>
+									<span><?php echo get_post_meta( $post->ID, 'job_experience', true ); ?></span>
 								</div>
 								<div class="job-type">
 									<?php
