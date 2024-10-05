@@ -60,12 +60,12 @@ function create_wp_jobs() {
 		'show_in_admin_bar'   => true,
 		'show_in_nav_menus'   => true,
 		'can_export'          => true,
-		'has_archive'         => true,
+		'has_archive'         => false,
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'rewrite'             => array( 'slug' => 'jobs' ),
 		'capability_type'     => 'post',
-		'supports'            => array( 'title', 'editor' ),
+		'support'            => array( 'title', 'editor' ),
 
 	);
 	register_post_type( 'wp_jobs', $args );
@@ -119,7 +119,7 @@ function create_wp_jobs() {
 			'publicly_queryable' => true,
 			'show_ui'            => true,
 			'show_in_nav_menus'  => true,
-			'hierarchical'       => false,
+			'hierarchical'       => true,
 			'query_var'          => true,
 			'rewrite'            => false,
 			'labels'             => $tax_labels,
@@ -152,7 +152,7 @@ register_deactivation_hook( __FILE__, 'plugin_wp_job_deactivate' );
 
 
 function wp_job_meta_box() {
-	add_meta_box( 'job-meta', __( 'Job meta' , 'altiushub' ),  'wp_job_post_meta_callback' , 'wp_jobs', 'advanced', 'high' );
+	add_meta_box( 'job-meta', __( 'Job details' , 'altiushub' ),  'wp_job_post_meta_callback' , 'wp_jobs', 'advanced', 'high' );
 }
 add_action( 'add_meta_boxes', 'wp_job_meta_box');
 
@@ -170,7 +170,7 @@ function wp_job_post_meta_callback( $post ) {
 
 		<div class="myplugin-image-preview">
 			<div style="margin-bottom:10px;">
-				<label for="job_location"><?php _e( 'Job Location', 'altiushub' ); ?></label>
+				<label for="job_location"><?php _e( 'Experience required', 'altiushub' ); ?></label>
 			</div>
 			<div>
 				<input style="width:100%; padding:10px !important;" type="text" id="job_location" name="job_location" value="<?php echo $value; ?>" />
