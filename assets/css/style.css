@@ -16,7 +16,6 @@
 }
 
 .job-wrapper h5 {
-    font-family: 'Graphik';
     font-size: 24px;
     font-weight: 500;
     line-height: 26px;
@@ -49,7 +48,6 @@
 
 .filter_buttons {
     background-color: transparent;
-    font-family: 'Graphik';
     font-size: 24px;
     font-weight: 500;
     line-height: 26px;
@@ -85,7 +83,6 @@ button.filter_buttons:first-child {
 .job-type,
 .job-link {
     text-align: center;
-    font-family: 'Poppins';
     font-size: 18px;
     font-weight: 300;
     line-height: 27px;
