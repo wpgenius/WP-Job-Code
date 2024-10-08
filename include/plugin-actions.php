@@ -19,6 +19,30 @@ function apply_templates( $template ) {
 //add_filter( 'template_include', 'apply_templates' );
 
 
+function single_job_content( $content ) {
+	global $post;
+	$post_type = get_post_type( $post );
+
+	if ( $post_type == 'wp_jobs' ) {
+
+		$job_experience = get_post_meta( $post->ID, 'job_experience', true ) ? : ''; 
+		$job_qualification = get_post_meta( $post->ID, 'job_qualification', true ) ? : '';
+		return '
+			<h3>Position Details</h3>
+			<ul class="job_details">
+				<li>Position Name :  '.get_the_title( $post ).'</li>
+				<li>Qualification :  '.$job_qualification.'</li>
+				<li>Experience :  '.$job_experience.'</li>
+				<li class="job_content">Requirements :  <div>'.$content.'</div></li>
+			</ul>
+		';
+	}
+
+	return $content;
+}
+
+add_filter( 'the_content', 'single_job_content' );
+
 /**
  * Filter breadcrumbs on Salary Data pages.
  *
