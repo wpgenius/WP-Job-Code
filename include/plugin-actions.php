@@ -16,7 +16,7 @@ function apply_templates( $template ) {
 	return $template;
 }
 
-add_filter( 'template_include', 'apply_templates' );
+//add_filter( 'template_include', 'apply_templates' );
 
 
 /**
