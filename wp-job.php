@@ -212,3 +212,10 @@ function wp_job_save_post_meta( $post_id ) {
 }
 add_action( 'save_post', 'wp_job_save_post_meta' );
 
+function job_editor_content( $content, $post ) {
+	if ( 'wp_jobs' == $post->post_type ) {
+		$content = __( 'Write job requirement here.', 'wp-job-code' );
+	}
+	return $content;
+}
+add_filter( 'default_content', 'job_editor_content', 10, 2 );
