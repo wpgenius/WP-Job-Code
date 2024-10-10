@@ -4,15 +4,19 @@
 
 .single-job-wrapper {
     border-radius: 4px;
-    border: 1px solid #7651E1;
+    border: 1px solid #008487;
+    box-shadow: 6px 6px 25px 0px #00000026;
     padding: 20px;
     margin-top: 75px;
-    box-shadow: 40px 60px 40px 0px #F5F7FB;
     transition: border 0.2s ease;
 }
 
 .single-job-wrapper:hover {
     border-width: 3px;
+}
+
+.single-job-wrapper .title h5 {
+    color: #008487 ;
 }
 
 .job-wrapper h5 {
@@ -25,9 +29,6 @@
     margin: 0;
 }
 
-.single-job-wrapper:hover h5 {
-    color: #797DF4;
-}
 
 .job-wrapper a:hover span {
     background: none;
