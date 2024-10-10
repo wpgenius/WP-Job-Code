@@ -47,37 +47,42 @@
     align-items: center;
 }
 
-.filter_buttons {
+.section_wrapper .filter_buttons {
     background-color: transparent;
     font-size: 24px;
     font-weight: 500;
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
-    color: #1E1E1E;
+    color: #B5B5B5;
 }
 
-.filter_buttons:hover {
+.section_wrapper .filter_buttons:hover {
     background-color: transparent;
-    color: #1E1E1E;
+    color: #008487;
 }
 
 button.filter_buttons:focus {
     background: none;
-    color: #1E1E1E;
+    color: #008487;
 }
 
-button.filter_buttons.is-checked {
-    border-bottom: 5px solid #797DF4;
+.section_wrapper button.filter_buttons.is-checked {
+    border-bottom: 2px solid #008487;
+    color: #008487;
 }
 
-button.filter_buttons {
-    padding: 0 0 15px 0;
+.section_wrapper button.filter_buttons {
+    padding: 0 0 10px 0;
     margin: 0 20px;
 }
 
-button.filter_buttons:first-child {
+.section_wrapper button.filter_buttons:first-child {
     margin: 0 20px 0 0;
+}
+
+.section_wrapper .button-group.filter-button-group {
+    line-height: 3em;
 }
 
 .location,
