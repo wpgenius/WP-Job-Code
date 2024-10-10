@@ -49,7 +49,7 @@
 
 .section_wrapper .filter_buttons {
     background-color: transparent;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
@@ -85,14 +85,20 @@ button.filter_buttons:focus {
    display: flex;
 }
 
+.single-job-wrapper .job-qualification {
+    font-weight: 500;
+    color: #000000;
+}
+
 .location,
 .job-type,
 .job-link {
     text-align: center;
     font-size: 18px;
-    font-weight: 300;
+    font-weight: 500;
     line-height: 27px;
     letter-spacing: 0em;
+    color: #000000;
 }
 
 @media only screen and (max-width: 767px) {
