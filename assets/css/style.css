@@ -50,7 +50,7 @@
 .section_wrapper .filter_buttons {
     background-color: transparent;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
     text-align: left;
@@ -82,7 +82,7 @@ button.filter_buttons:focus {
 }
 
 .section_wrapper .button-group.filter-button-group {
-    line-height: 3em;
+   display: flex;
 }
 
 .location,
