@@ -21,11 +21,7 @@
 
 .job-wrapper h5 {
     font-size: 24px;
-    font-weight: 500;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-    color: #1E1E1E;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -67,6 +63,12 @@ button.filter_buttons:focus {
     color: #008487;
 }
 
+.section_wrapper button {
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+
 .section_wrapper button.filter_buttons.is-checked {
     border-bottom: 2px solid #008487;
     color: #008487;
@@ -101,6 +103,17 @@ button.filter_buttons:focus {
     color: #000000;
 }
 
+body.single-wp_jobs ul.job_details > li > span {
+    color: #008487;
+    font-weight: 700;
+    line-height: 2em;
+}
+body.single-wp_jobs .job_content ul li {
+    line-height: 2em;
+}
+ul li::marker{
+    color:#C77153;
+}
 @media only screen and (max-width: 767px) {
     .single-job-wrapper {
         padding: 20px;
