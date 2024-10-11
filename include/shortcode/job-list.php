@@ -40,7 +40,7 @@ function display_job_list() {
 						<div class="job-item <?php echo implode( ' ', $term_list ); ?>" href="<?php echo get_the_permalink(); ?>">            
 							<div class="single-job-wrapper" id="<?php echo $post->ID; ?>">
 								<div class="title">
-									<h5><?php the_title(); ?></h5>
+									<h5><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h5>
 								</div>
 								<div class="job-qualification">
 									<span><?php echo get_post_meta( $post->ID, 'job_qualification', true ); ?></span>
