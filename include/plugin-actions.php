@@ -30,10 +30,10 @@ function single_job_content( $content ) {
 		return '
 			<h3>Position Details</h3>
 			<ul class="job_details">
-				<li>Position Name :  '.get_the_title( $post ).'</li>
-				<li>Qualification :  '.$job_qualification.'</li>
-				<li>Experience :  '.$job_experience.'</li>
-				<li class="job_content">Requirements :  <div>'.$content.'</div></li>
+				<li><span>Position Name </span>:  '.get_the_title( $post ).'</li>
+				<li><span>Qualification</span> :  '.$job_qualification.'</li>
+				<li><span>Experience</span> :  '.$job_experience.'</li>
+				<li class="job_content"><span>Requirements </span>:  <div>'.$content.'</div></li>
 			</ul>
 		';
 	}
