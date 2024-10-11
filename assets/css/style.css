@@ -7,7 +7,7 @@
     border: 1px solid #008487;
     box-shadow: 6px 6px 25px 0px #00000026;
     padding: 20px;
-    margin-top: 75px;
+    margin-top: 25px;
     transition: border 0.2s ease;
 }
 
@@ -123,25 +123,51 @@ body.single-wp_jobs ul.job_details > li > span {
     color: #008487;
     font-weight: 700;
     line-height: 2em;
+    margin-left: 10px;
 }
 body.single-wp_jobs .job_content ul li {
     line-height: 2em;
 }
-ul li::marker{
+
+.job_content ul li::marker{
     color:#C77153;
 }
+
+
+ul.job_details {
+    list-style-image: url(../../assets/images/dot.jpg);
+    /* padding-left: 40px; */
+    line-height: 2.4em;
+}
+
+
+body.single-wp_jobs .site-content {
+    background-image: url(../../assets/images/pattern.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+body.single-wp_jobs article.wp_jobs.ast-article-single {background: transparent;}
+
+
+
+
+
 @media only screen and (min-width: 768px) and (max-width: 1200px){
 .section_wrapper .button-group.filter-button-group {
     display: block;
 }
 }
+
 @media only screen and (max-width: 767px) {
     .single-job-wrapper {
         padding: 20px;
         display: grid;
         grid-template-columns: 100%;
         justify-items: start;
+        margin-top: 20px;
     }
+
     .single-job-wrapper .location,
     .single-job-wrapper .job-type,
     .single-job-wrapper .job-link {
@@ -155,7 +181,7 @@ ul li::marker{
         gap: 20px;
         grid-template-columns: 50% 50%;
         flex-wrap: wrap;
-        justify-content: space-between;
+        /* justify-content: space-between; */
     }
     button.filter_buttons {
         margin: 0 !important;
