@@ -92,6 +92,22 @@ button.filter_buttons:focus {
     color: #000000;
 }
 
+.single-wp_jobs article.wp_jobs h3::after {
+    content: " ";
+    height: 2px;
+    position: absolute;
+    width: 160px;
+    background-color: var(--ast-global-color-1);
+    border: 0;
+    left: 0;
+    display: block;
+}
+
+.single-wp_jobs article.wp_jobs h3 {
+    position: relative;
+}
+
+
 .location,
 .job-type,
 .job-link {
