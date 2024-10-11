@@ -130,6 +130,11 @@ body.single-wp_jobs .job_content ul li {
 ul li::marker{
     color:#C77153;
 }
+@media only screen and (min-width: 768px) and (max-width: 1200px){
+.section_wrapper .button-group.filter-button-group {
+    display: block;
+}
+}
 @media only screen and (max-width: 767px) {
     .single-job-wrapper {
         padding: 20px;
