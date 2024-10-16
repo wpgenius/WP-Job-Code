@@ -145,7 +145,7 @@ body.single-wp_jobs .job_content ul li {
 
 
 ul.job_details {
-    list-style-image: url(../../assets/images/dot.jpg);
+    list-style-image: url(../../assets/images/dot.png);
     /* padding-left: 40px; */
     line-height: 2.4em;
 }
