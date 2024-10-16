@@ -48,7 +48,7 @@
 
 .section_wrapper .filter_buttons {
     background-color: transparent;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 700;
     line-height: 26px;
     letter-spacing: 0em;
@@ -79,7 +79,7 @@ button.filter_buttons:focus {
 
 .section_wrapper button.filter_buttons {
     padding: 0 0 10px 0;
-    margin: 0 20px;
+    margin: 0 35px;
 }
 
 .section_wrapper button.filter_buttons:first-child {
@@ -88,7 +88,10 @@ button.filter_buttons:focus {
 
 .section_wrapper .button-group.filter-button-group {
    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
+
 
 .section_wrapper .js-filter-wrapper {
     margin-top: 25px !important;
@@ -156,7 +159,10 @@ body.single-wp_jobs .site-content {
 
 body.single-wp_jobs article.wp_jobs.ast-article-single {background: transparent;}
 
-
+body.single-wp_jobs .job-form {
+    display: flex;
+    gap: 20px;
+}
 
 
 
@@ -192,5 +198,10 @@ body.single-wp_jobs article.wp_jobs.ast-article-single {background: transparent;
     }
     button.filter_buttons {
         margin: 0 !important;
+    }
+
+    body.single-wp_jobs .job-form {
+        display: block;
+        gap: 0px;
     }
 }
