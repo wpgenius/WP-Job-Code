@@ -162,6 +162,11 @@ body.single-wp_jobs article.wp_jobs.ast-article-single {background: transparent;
 body.single-wp_jobs .job-form {
     display: flex;
     gap: 20px;
+    margin-bottom: 0;
+}
+
+body.single-wp_jobs .job-form > p {
+    flex: 1;
 }
 
 
@@ -204,4 +209,5 @@ body.single-wp_jobs .job-form {
         display: block;
         gap: 0px;
     }
+
 }
