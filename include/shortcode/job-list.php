@@ -46,7 +46,7 @@ function display_job_list() {
 									<span><?php echo get_post_meta( $post->ID, 'job_qualification', true ); ?></span>
 								</div>
 								<div class="location">
-									<span><?php echo get_post_meta( $post->ID, 'job_experience', true ); ?></span>
+									<span>Experience : <?php echo get_post_meta( $post->ID, 'job_experience', true ); ?></span>
 								</div>
 								<div class="job-link">
 									<a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo WP_JOB_DIR_URL . 'assets/images/job-code-icon.png'; ?>" alt=""></a>
