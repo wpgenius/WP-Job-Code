@@ -13,8 +13,8 @@ function display_job_list() {
 	$terms_name = get_terms(
 		array(
 			'taxonomy' => 'wp_job_cat',
-			'orderby'  => 'meta_value_num',
-			'order'    => 'count',
+			'orderby'  => 'term_id',
+			'order'    => 'asc',
 		)
 	);
 
