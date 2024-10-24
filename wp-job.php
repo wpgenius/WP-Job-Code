@@ -63,7 +63,7 @@ function create_wp_jobs() {
 		'publicly_queryable'  => true,
 		'rewrite'             => array( 'slug' => 'jobs' ),
 		'capability_type'     => 'post',
-		'supports'            => array( 'title', 'editor','excerpt' ),
+		'supports'            => array( 'title', 'editor','excerpt', 'thumbnail' ),
 
 	);
 	register_post_type( 'wp_jobs', $args );
