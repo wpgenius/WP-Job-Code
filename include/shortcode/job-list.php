@@ -42,14 +42,18 @@ function display_job_list() {
 								<div class="title">
 									<h5><a href="<?php echo get_the_permalink(); ?>"><?php the_title(); ?></a></h5>
 								</div>
-								<div class="job-qualification">
-									<span><?php echo get_post_meta( $post->ID, 'job_qualification', true ); ?></span>
+								<div class="job-type">
+									<?php
+									$job_types = wp_get_post_terms( $post->ID, 'wp_job_type', array( 'fields' => 'all' ) );
+									foreach ( $job_types as $job_type ) { ?>
+									<span><?php echo $job_type->name; ?></span>
+									<?php } ?>
 								</div>
 								<div class="location">
-									<span>Experience : <?php echo get_post_meta( $post->ID, 'job_experience', true ); ?></span>
+									<span><?php echo get_post_meta( $post->ID, 'job_location', true ); ?></span>
 								</div>
 								<div class="job-link">
-									<a href="<?php echo get_the_permalink(); ?>"><img src="<?php echo WP_JOB_DIR_URL . 'assets/images/job-code-icon.png'; ?>" alt=""></a>
+									<a href="<?php echo get_the_permalink(); ?>"> > </a>
 								</div>
 							</div>
 						</div>

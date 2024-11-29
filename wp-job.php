@@ -164,13 +164,22 @@ add_action( 'add_meta_boxes', 'wp_job_meta_box');
  */
 function wp_job_post_meta_callback( $post ) {
 
+	$job_location = get_post_meta( $post->ID, 'job_location', true ); 
 	$job_experience = get_post_meta( $post->ID, 'job_experience', true ); 
 	$job_qualification = get_post_meta( $post->ID, 'job_qualification', true ); ?>
 
 	<div class="form-wrap">
 		<div class="class-row">
 			<div class="left">
-				<label for="job_experience"><?php _e( 'Experience required', 'altiushub' ); ?></label>
+				<label for="job_location"><?php _e( 'Location required', 'altiushub' ); ?></label>
+			</div>
+			<div class="right">
+				<input style="width:100%; padding:10px !important;" type="text" id="job_location" name="job_location" value="<?php echo $job_location; ?>" />
+			</div>
+		</div>
+		<div class="class-row">
+			<div class="left">
+				<label for="job_experience"><?php _e( 'Experience', 'altiushub' ); ?></label>
 			</div>
 			<div class="right">
 				<input style="width:100%; padding:10px !important;" type="text" id="job_experience" name="job_experience" value="<?php echo $job_experience; ?>" />
@@ -179,7 +188,7 @@ function wp_job_post_meta_callback( $post ) {
 		
 		<div class="class-row">
 			<div class="left">
-				<label for="job_qualification"><?php _e( 'Qualification required', 'altiushub' ); ?></label>
+				<label for="job_qualification"><?php _e( 'Qualification', 'altiushub' ); ?></label>
 			</div>
 			<div class="right">
 				<input style="width:100%; padding:10px !important;" type="text" id="job_qualification" name="job_qualification" value="<?php echo $job_qualification; ?>" />
@@ -198,6 +207,12 @@ function wp_job_post_meta_callback( $post ) {
  */
 function wp_job_save_post_meta( $post_id ) {
 
+	if ( isset( $_POST['job_location'] ) && $_POST['job_location'] != '' ) {
+		$mydata = $_POST['job_location'];
+		update_post_meta( $post_id, 'job_location', $mydata );
+
+	}
+	
 	if ( isset( $_POST['job_experience'] ) && $_POST['job_experience'] != '' ) {
 		$mydata = $_POST['job_experience'];
 		update_post_meta( $post_id, 'job_experience', $mydata );

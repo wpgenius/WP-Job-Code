@@ -3,47 +3,21 @@
 */
 
 .single-job-wrapper {
-    /* border-radius: 4px; */
-    border: 1px solid #008487;
-    box-shadow: 6px 6px 25px 0px #00000026;
-    padding: 20px;
-    margin-top: 25px;
-    transition: border 0.2s ease;
-    background-color: #fff;
 }
 
 .single-job-wrapper:hover {
-    border-width: 3px;
 }
 
 .single-job-wrapper .title h5 a {
-    color: #008487 ;
-    text-decoration: none !important;
 }
 
 .job-wrapper h5 {
-    font-size: 24px;
-    font-weight: 600;
-    margin: 0;
 }
 
-
-.job-wrapper a:hover span {
-    background: none;
-    color: #ffffff;
-}
 
 .job-item {
     display: block;
     width: 100%;
-}
-
-.single-job-wrapper {
-    display: grid;
-    /* grid-template-columns: 45% 25% 25% 5%; */
-    grid-template-columns: 30% 38% 27% 5%;
-    padding: 30px;
-    align-items: center;
 }
 
 .section_wrapper .filter_buttons {
@@ -101,22 +75,6 @@ button.filter_buttons:focus {
     font-weight: 500;
     color: #000000;
 }
-
-.single-wp_jobs article.wp_jobs h3::after {
-    content: " ";
-    height: 2px;
-    position: absolute;
-    width: 160px;
-    background-color: var(--ast-global-color-1);
-    border: 0;
-    left: 0;
-    display: block;
-}
-
-.single-wp_jobs article.wp_jobs h3 {
-    position: relative;
-}
-
 
 .location,
 .job-type,
@@ -179,11 +137,6 @@ body.single-wp_jobs .job-form > p {
 
 @media only screen and (max-width: 767px) {
     .single-job-wrapper {
-        padding: 20px;
-        display: grid;
-        grid-template-columns: 100%;
-        justify-items: start;
-        margin-top: 20px;
     }
 
     .single-job-wrapper .location,
