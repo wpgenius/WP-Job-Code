@@ -11,13 +11,15 @@ jQuery(document).ready(function($) {
         jQuerygrid.isotope({ filter: filterValue });
     });
 
-    jQuery('.button-group').each(function(i, buttonGroup) {
+    jQuery('.filter-button-group').each(function(i, buttonGroup) {
         var jQuerybuttonGroup = jQuery(buttonGroup);
-        jQuerybuttonGroup.on('click', 'span', function() {
+        jQuerybuttonGroup.on('click', 'button', function() {
             jQuerybuttonGroup.find('.is-checked').removeClass('is-checked');
             jQuery(this).addClass('is-checked');
         });
     });
+    jQuery(".filter_buttons:first-child").trigger('click');
+
 });
 
 jQuery(window).load(function() {
