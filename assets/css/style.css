@@ -24,7 +24,6 @@ body.single-wp_jobs article {
     border-bottom: 1px solid #EAECEF !important;
     gap: 20%;
     padding: 20px;
-    margin-top: 30px;
     border-radius: 0px;
 }
 
@@ -100,11 +99,6 @@ button.filter_buttons:focus {
     display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
-}
-
-
-.section_wrapper .js-filter-wrapper {
-    margin-top: 25px !important;
 }
 
 .single-job-wrapper .job-qualification {
