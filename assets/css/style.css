@@ -2,18 +2,54 @@
 * WP JOb CSS
 */
 
-.single-job-wrapper {
+
+/* single job post  */
+
+body.single-wp_jobs div#content {
+    background-color: #fee7e3;
 }
 
-.single-job-wrapper:hover {
+body.single-wp_jobs article {
+    background-color: #fee7e3 !important;
 }
 
-.single-job-wrapper .title h5 a {
+/* career page */
+
+.micorza-job .single-job-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+    border: none;
+    border-bottom: 1px solid #EAECEF !important;
+    gap: 20%;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 0px;
 }
 
-.job-wrapper h5 {
+.micorza-job .single-job-wrapper .title {
+    width: 20%;
 }
 
+.micorza-job .job-wrapper a:hover .single-job-wrapper {
+    background-color: transparent !important;
+    color: black !important;
+}
+
+.micorza-job .job-wrapper a:hover h5 {
+    color: black;
+}
+
+.micorza-job .job-wrapper a:hover span {
+    background: none;
+    color: black;
+}
+
+.micorza-job .job-wrapper .single-job-wrapper .job-type span {
+    color: #6E757C;
+    background: none;
+}
 
 .job-item {
     display: block;
@@ -61,7 +97,7 @@ button.filter_buttons:focus {
 }
 
 .section_wrapper .button-group.filter-button-group {
-   display: flex;
+    display: flex;
     align-items: flex-start;
     justify-content: space-evenly;
 }
@@ -87,18 +123,19 @@ button.filter_buttons:focus {
     color: #000000;
 }
 
-body.single-wp_jobs ul.job_details > li > span {
+body.single-wp_jobs ul.job_details>li>span {
     color: #008487;
     font-weight: 700;
     line-height: 2em;
     margin-left: 10px;
 }
+
 body.single-wp_jobs .job_content ul li {
     line-height: 2em;
 }
 
-.job_content ul li::marker{
-    color:#C77153;
+.job_content ul li::marker {
+    color: #C77153;
 }
 
 
@@ -115,7 +152,9 @@ body.single-wp_jobs .site-content {
     background-position: right;
 }
 
-body.single-wp_jobs article.wp_jobs.ast-article-single {background: transparent;}
+body.single-wp_jobs article.wp_jobs.ast-article-single {
+    background: transparent;
+}
 
 body.single-wp_jobs .job-form {
     display: flex;
@@ -123,30 +162,41 @@ body.single-wp_jobs .job-form {
     margin-bottom: 0;
 }
 
-body.single-wp_jobs .job-form > p {
+body.single-wp_jobs .job-form>p {
     flex: 1;
 }
 
+@media only screen and (max-width:425px) {
+    .micorza-job .single-job-wrapper .title {
+        width: 40%;
+        padding-top: 15px;
+    }
 
+    .micorza-job .single-job-wrapper {
+        gap: 25px;
+    }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px){
-.section_wrapper .button-group.filter-button-group {
-    display: block;
 }
+
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+    .section_wrapper .button-group.filter-button-group {
+        display: block;
+    }
 }
 
 @media only screen and (max-width: 767px) {
-    .single-job-wrapper {
-    }
 
     .single-job-wrapper .location,
     .single-job-wrapper .job-type,
     .single-job-wrapper .job-link {
         margin-top: 10px;
     }
+
     .wp_jobs-template-default .ast-container {
         padding: 20px !important;
     }
+
     .filter-button-group {
         display: flex;
         gap: 20px;
@@ -154,6 +204,7 @@ body.single-wp_jobs .job-form > p {
         flex-wrap: wrap;
         /* justify-content: space-between; */
     }
+
     button.filter_buttons {
         margin: 0 !important;
     }
