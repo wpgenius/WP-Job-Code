@@ -140,12 +140,6 @@ ul.job_details {
 }
 
 
-body.single-wp_jobs .site-content {
-    background-image: url(../../assets/images/pattern.png);
-    background-repeat: no-repeat;
-    background-position: right;
-}
-
 body.single-wp_jobs article.wp_jobs.ast-article-single {
     background: transparent;
 }
